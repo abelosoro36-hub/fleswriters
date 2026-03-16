@@ -206,126 +206,69 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Hero illustration */}
+        {/* Hero photo collage — replaces cartoon illustration */}
         <div className="wp-hero__visual">
           <div className="wp-hero__visual-glow" />
-          <svg viewBox="0 0 540 480" fill="none" xmlns="http://www.w3.org/2000/svg" className="wp-hero__svg">
-            {/* Ground shadow */}
-            <ellipse cx="270" cy="420" rx="210" ry="30" fill="#0d2235" opacity="0.5"/>
-            {/* Desk */}
-            <rect x="70" y="318" width="370" height="16" rx="5" fill="#1e3d54"/>
-            <rect x="100" y="332" width="12" height="60" rx="3" fill="#162d3f"/>
-            <rect x="408" y="332" width="12" height="60" rx="3" fill="#162d3f"/>
 
-            {/* Laptop */}
-            <rect x="170" y="228" width="188" height="94" rx="7" fill="#132638"/>
-            <rect x="176" y="234" width="176" height="84" rx="5" fill="#0a1e2e"/>
-            <rect x="180" y="238" width="168" height="76" rx="4" fill="#0f2d40" opacity="0.9"/>
-            <rect x="188" y="246" width="88" height="5" rx="2.5" fill="#e8c87d" opacity="0.75"/>
-            <rect x="188" y="256" width="120" height="4" rx="2" fill="#9ecfb8" opacity="0.65"/>
-            <rect x="188" y="265" width="70" height="4" rx="2" fill="#f4a97f" opacity="0.55"/>
-            <rect x="188" y="274" width="100" height="4" rx="2" fill="#9ecfb8" opacity="0.65"/>
-            <rect x="188" y="283" width="60" height="4" rx="2" fill="#b8a9e8" opacity="0.55"/>
-            <rect x="188" y="292" width="108" height="4" rx="2" fill="#e8c87d" opacity="0.5"/>
-            <rect x="148" y="320" width="228" height="8" rx="4" fill="#1a3245"/>
-            <rect x="238" y="318" width="56" height="4" rx="2" fill="#132638"/>
+          {/* Photo collage frame */}
+          <div className="wp-photo-collage">
 
-            {/* STUDENT on laptop */}
-            <ellipse cx="264" cy="242" rx="24" ry="26" fill="#dba882"/>
-            <path d="M241 232 Q243 210 264 209 Q285 210 287 232 Q282 220 264 221 Q246 220 241 232Z" fill="#2c1a0e"/>
-            <ellipse cx="257" cy="240" rx="3" ry="3.5" fill="#1a0e08"/>
-            <ellipse cx="271" cy="240" rx="3" ry="3.5" fill="#1a0e08"/>
-            <ellipse cx="258" cy="239" rx="1" ry="1.2" fill="white"/>
-            <ellipse cx="272" cy="239" rx="1" ry="1.2" fill="white"/>
-            <path d="M258 248 Q264 253 270 248" stroke="#b07040" strokeWidth="1.5" strokeLinecap="round" fill="none"/>
-            <rect x="240" y="258" width="48" height="68" rx="14" fill="#2c5580"/>
-            <rect x="214" y="296" width="44" height="16" rx="8" fill="#dba882" transform="rotate(-18 214 296)"/>
-            <rect x="278" y="296" width="44" height="16" rx="8" fill="#dba882" transform="rotate(18 278 296)"/>
-            <path d="M241 228 Q241 213 264 213 Q287 213 287 228" stroke="#1a0e08" strokeWidth="4" fill="none" strokeLinecap="round"/>
-            <rect x="237" y="226" width="8" height="12" rx="4" fill="#e8c87d"/>
-            <rect x="283" y="226" width="8" height="12" rx="4" fill="#e8c87d"/>
+            {/* Main large photo — top (classroom with teacher) */}
+            <div className="wp-photo wp-photo--main">
+              <img src="/images/student_4.jpg" alt="Students in class with teacher" />
+              <div className="wp-photo__scan"/>
+              <div className="wp-photo__holo"/>
+              <div className="wp-photo__border"/>
+            </div>
 
-            {/* WHITEBOARD */}
-            <rect x="22" y="118" width="138" height="106" rx="7" fill="#f5f0e6"/>
-            <rect x="27" y="123" width="128" height="96" rx="5" fill="#fffcf4"/>
-            <rect x="36" y="134" width="75" height="5" rx="2.5" fill="#3d5a73" opacity="0.65"/>
-            <rect x="36" y="145" width="58" height="4" rx="2" fill="#3d5a73" opacity="0.45"/>
-            <rect x="36" y="155" width="92" height="4" rx="2" fill="#3d5a73" opacity="0.45"/>
-            <rect x="36" y="165" width="46" height="4" rx="2" fill="#e8c87d" opacity="0.75"/>
-            <rect x="36" y="175" width="76" height="4" rx="2" fill="#3d5a73" opacity="0.45"/>
-            <rect x="36" y="185" width="62" height="4" rx="2" fill="#9ecfb8" opacity="0.75"/>
-            <rect x="36" y="195" width="82" height="4" rx="2" fill="#3d5a73" opacity="0.35"/>
-            <rect x="85" y="222" width="6" height="30" rx="3" fill="#2e5068"/>
-            <rect x="72" y="250" width="34" height="6" rx="3" fill="#2e5068"/>
+            {/* Bottom left — group at laptop */}
+            <div className="wp-photo wp-photo--bl">
+              <img src="/images/student_1.jpg" alt="Group of students at laptop" />
+              <div className="wp-photo__scan"/>
+              <div className="wp-photo__holo"/>
+              <div className="wp-photo__border"/>
+            </div>
 
-            {/* TEACHER */}
-            <ellipse cx="430" cy="218" rx="25" ry="27" fill="#f0be8a"/>
-            <path d="M406 208 Q408 188 430 186 Q452 188 454 208 L450 203 Q430 197 410 203Z" fill="#5a2d0c"/>
-            <ellipse cx="430" cy="188" rx="14" ry="10" fill="#5a2d0c"/>
-            <ellipse cx="423" cy="216" rx="3" ry="3.5" fill="#1a0e08"/>
-            <ellipse cx="437" cy="216" rx="3" ry="3.5" fill="#1a0e08"/>
-            <ellipse cx="424" cy="215" rx="1" ry="1.2" fill="white"/>
-            <ellipse cx="438" cy="215" rx="1" ry="1.2" fill="white"/>
-            <rect x="418" y="211" width="12" height="9" rx="4" fill="none" stroke="#3d5a73" strokeWidth="1.5"/>
-            <rect x="432" y="211" width="12" height="9" rx="4" fill="none" stroke="#3d5a73" strokeWidth="1.5"/>
-            <line x1="430" y1="215" x2="432" y2="215" stroke="#3d5a73" strokeWidth="1.5"/>
-            <path d="M424 225 Q430 230 436 225" stroke="#b07040" strokeWidth="1.5" strokeLinecap="round" fill="none"/>
-            <rect x="405" y="242" width="52" height="72" rx="14" fill="#3d5a73"/>
-            <rect x="426" y="244" width="10" height="50" rx="3" fill="#e8c87d" opacity="0.4"/>
-            <path d="M405 262 Q382 250 352 240" stroke="#f0be8a" strokeWidth="14" strokeLinecap="round" fill="none"/>
-            <circle cx="348" cy="238" r="8" fill="#f0be8a"/>
-            <rect x="454" y="264" width="38" height="14" rx="7" fill="#f0be8a" transform="rotate(22 454 264)"/>
+            {/* Bottom right — smiling student */}
+            <div className="wp-photo wp-photo--br">
+              <img src="/images/image_5.jpg" alt="Student at computer" />
+              <div className="wp-photo__scan"/>
+              <div className="wp-photo__holo"/>
+              <div className="wp-photo__border"/>
+            </div>
 
-            {/* STUDENT LEFT SMALL */}
-            <ellipse cx="132" cy="286" rx="18" ry="19" fill="#c8784a"/>
-            <path d="M115 278 Q117 263 132 262 Q147 263 149 278 Q144 270 132 271 Q120 270 115 278Z" fill="#1a0e05"/>
-            <ellipse cx="127" cy="284" rx="2.5" ry="3" fill="#1a0e05"/>
-            <ellipse cx="137" cy="284" rx="2.5" ry="3" fill="#1a0e05"/>
-            <path d="M128 291 Q132 296 136 291" stroke="#904030" strokeWidth="1.2" strokeLinecap="round" fill="none"/>
-            <rect x="116" y="303" width="32" height="44" rx="10" fill="#c0392b"/>
-            <rect x="106" y="311" width="46" height="30" rx="4" fill="#fffcf4"/>
-            <rect x="111" y="317" width="30" height="3" rx="1.5" fill="#3d5a73" opacity="0.5"/>
-            <rect x="111" y="324" width="24" height="3" rx="1.5" fill="#3d5a73" opacity="0.4"/>
-            <rect x="111" y="331" width="32" height="3" rx="1.5" fill="#3d5a73" opacity="0.35"/>
+            {/* Accent strip — laptop hands */}
+            <div className="wp-photo wp-photo--strip">
+              <img src="/images/student_3.jpg" alt="Students typing on laptops" />
+              <div className="wp-photo__scan"/>
+              <div className="wp-photo__holo"/>
+            </div>
 
-            {/* STUDENT RIGHT SMALL */}
-            <ellipse cx="352" cy="284" rx="17" ry="18" fill="#ba8c60"/>
-            <path d="M336 276 Q338 263 352 262 Q366 263 368 276 Q363 269 352 270 Q341 269 336 276Z" fill="#2c1a0e"/>
-            <ellipse cx="347" cy="282" rx="2.5" ry="3" fill="#1a0e05"/>
-            <ellipse cx="357" cy="282" rx="2.5" ry="3" fill="#1a0e05"/>
-            <path d="M348 290 Q352 295 356 290" stroke="#8a5830" strokeWidth="1.2" strokeLinecap="round" fill="none"/>
-            <rect x="337" y="300" width="30" height="44" rx="10" fill="#1a7a5e"/>
-            <rect x="328" y="308" width="42" height="28" rx="4" fill="#2c4a68"/>
-            <rect x="333" y="313" width="28" height="3" rx="1.5" fill="#e8c87d" opacity="0.7"/>
-            <rect x="333" y="320" width="22" height="3" rx="1.5" fill="white" opacity="0.4"/>
-            <rect x="333" y="327" width="30" height="3" rx="1.5" fill="white" opacity="0.4"/>
+            {/* Floating UI cards — sit on top of photos */}
+            <div className="wp-fc wp-fc--grade">
+              <span className="wp-fc__icon">⭐</span>
+              <div><strong>Graded: A+</strong><span>Great structure & argument!</span><span className="wp-fc__teacher">— Ms. Adaeze O.</span></div>
+            </div>
 
-            {/* Floating UI cards */}
-            <g className="wp-hero-float-1">
-              <rect x="376" y="72" width="120" height="56" rx="10" fill="#e8c87d" opacity="0.96"/>
-              <text x="389" y="94" fontSize="11" fill="#2c1a0e" fontWeight="bold">✦ New Task Posted</text>
-              <text x="389" y="108" fontSize="9" fill="#2c1a0e" opacity="0.7">Essay: Climate Change</text>
-              <text x="389" y="120" fontSize="9" fill="#2c1a0e" opacity="0.6">Due: Friday · 100pts</text>
-            </g>
-            <g className="wp-hero-float-2">
-              <rect x="16" y="46" width="110" height="52" rx="10" fill="#9ecfb8" opacity="0.96"/>
-              <text x="28" y="67" fontSize="11" fill="#0d2e1e" fontWeight="bold">📊 Progress</text>
-              <text x="28" y="81" fontSize="9" fill="#0d2e1e" opacity="0.8">19/24 submitted</text>
-              <rect x="28" y="87" width="70" height="5" rx="2.5" fill="#0d2e1e" opacity="0.15"/>
-              <rect x="28" y="87" width="55" height="5" rx="2.5" fill="#0d2e1e" opacity="0.55"/>
-            </g>
-            <g className="wp-hero-float-3">
-              <rect x="198" y="36" width="128" height="48" rx="10" fill="#3d5a73" opacity="0.97"/>
-              <text x="212" y="57" fontSize="11" fill="#e8c87d" fontWeight="bold">⭐ Graded: A+</text>
-              <text x="212" y="71" fontSize="9" fill="white" opacity="0.75">Great structure & argument!</text>
-              <text x="212" y="79" fontSize="8" fill="white" opacity="0.45">— Ms. Adaeze O.</text>
-            </g>
-            <g className="wp-hero-float-4">
-              <rect x="360" y="370" width="138" height="46" rx="10" fill="#0d2235" opacity="0.97" stroke="#e8c87d" strokeWidth="1" strokeOpacity="0.3"/>
-              <text x="373" y="390" fontSize="10" fill="#e8c87d" fontWeight="bold">🤖 AI Moderator</text>
-              <text x="373" y="406" fontSize="8.5" fill="#9ecfb8" opacity="0.85">Community rules enforced ✓</text>
-            </g>
-          </svg>
+            <div className="wp-fc wp-fc--progress">
+              <span className="wp-fc__icon">📊</span>
+              <div><strong>Progress</strong><span>19/24 submitted</span></div>
+            </div>
+
+            <div className="wp-fc wp-fc--task">
+              <span className="wp-fc__icon">✦</span>
+              <div><strong>New Task Posted</strong><span>Essay: Climate Change</span><span>Due: Friday · 100pts</span></div>
+            </div>
+
+            <div className="wp-fc wp-fc--ai">
+              <span className="wp-fc__icon">🤖</span>
+              <div><strong>AI Moderator</strong><span>Community rules enforced ✓</span></div>
+            </div>
+
+            {/* Corner glow effects */}
+            <div className="wp-collage-glow wp-collage-glow--tl"/>
+            <div className="wp-collage-glow wp-collage-glow--br"/>
+          </div>
         </div>
       </section>
 
@@ -1003,18 +946,159 @@ export default function Home() {
         .wp-trust-stars{color:#e8c87d;font-size:0.8rem;letter-spacing:1px;}
         .wp-hero__visual{position:relative;animation:fadeInUp 0.6s 0.3s ease both;}
         .wp-hero__visual-glow{
-          position:absolute;top:10%;left:10%;right:10%;bottom:10%;
-          background:radial-gradient(ellipse at center,rgba(61,90,115,0.3),transparent 70%);
-          filter:blur(30px);pointer-events:none;
+          position:absolute;top:-10%;left:-10%;right:-10%;bottom:-10%;
+          background:radial-gradient(ellipse at center,rgba(30,80,140,0.25),transparent 68%);
+          filter:blur(40px);pointer-events:none;z-index:0;
         }
-        .wp-hero__svg{width:100%;max-width:560px;filter:drop-shadow(0 20px 60px rgba(0,0,0,0.4));}
-        .wp-hero-float-1{animation:hFloat1 3s ease-in-out infinite;}
-        .wp-hero-float-2{animation:hFloat2 3.8s ease-in-out infinite 0.5s;}
-        .wp-hero-float-3{animation:hFloat3 3.2s ease-in-out infinite 1s;}
-        .wp-hero-float-4{animation:hFloat1 4s ease-in-out infinite 1.8s;}
-        @keyframes hFloat1{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-        @keyframes hFloat2{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
-        @keyframes hFloat3{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+
+        /* ── PHOTO COLLAGE ── */
+        .wp-photo-collage{
+          position:relative;
+          width:100%;
+          height:480px;
+          z-index:1;
+        }
+
+        /* Base photo styles */
+        .wp-photo{
+          position:absolute;overflow:hidden;border-radius:16px;
+          box-shadow:0 20px 60px rgba(0,0,0,0.5);
+        }
+        .wp-photo img{
+          width:100%;height:100%;object-fit:cover;display:block;
+          transition:transform 6s ease;
+        }
+        .wp-photo:hover img{transform:scale(1.04);}
+
+        /* Holographic scan-line overlay */
+        .wp-photo__scan{
+          position:absolute;inset:0;z-index:2;border-radius:inherit;
+          background:repeating-linear-gradient(
+            0deg,transparent,transparent 3px,
+            rgba(0,0,0,0.07) 3px,rgba(0,0,0,0.07) 4px
+          );
+          pointer-events:none;
+        }
+        /* Colour tint wash */
+        .wp-photo__holo{
+          position:absolute;inset:0;z-index:3;border-radius:inherit;pointer-events:none;
+          background:linear-gradient(135deg,rgba(15,60,120,0.38) 0%,rgba(0,180,220,0.15) 100%);
+          mix-blend-mode:screen;
+        }
+        /* Neon glow border */
+        .wp-photo__border{
+          position:absolute;inset:0;z-index:4;border-radius:inherit;pointer-events:none;
+          box-shadow:
+            inset 0 0 0 1px rgba(100,180,255,0.35),
+            inset 0 0 20px rgba(0,140,255,0.18),
+            inset 0 0 4px rgba(232,200,125,0.12);
+        }
+        /* Fade edges into background */
+        .wp-photo::after{
+          content:"";position:absolute;inset:0;z-index:5;border-radius:inherit;pointer-events:none;
+          background:
+            linear-gradient(to right,rgba(7,21,36,0.55) 0%,transparent 18%,transparent 82%,rgba(7,21,36,0.55) 100%),
+            linear-gradient(to bottom,rgba(7,21,36,0.5) 0%,transparent 15%,transparent 82%,rgba(7,21,36,0.85) 100%);
+        }
+
+        /* MAIN large photo — top spanning */
+        .wp-photo--main{
+          top:0;left:5%;width:90%;height:260px;
+          animation:photoFloat1 8s ease-in-out infinite;
+        }
+
+        /* Bottom left */
+        .wp-photo--bl{
+          bottom:0;left:0;width:52%;height:190px;
+          animation:photoFloat2 9s ease-in-out infinite 1.2s;
+        }
+
+        /* Bottom right */
+        .wp-photo--br{
+          bottom:0;right:0;width:44%;height:190px;
+          border-radius:16px 16px 16px 16px;
+          animation:photoFloat1 7s ease-in-out infinite 2.5s;
+        }
+
+        /* Thin accent strip between bottom two */
+        .wp-photo--strip{
+          bottom:90px;left:50%;transform:translateX(-50%);
+          width:4px;height:96px;
+          border-radius:2px;
+          box-shadow:0 0 12px rgba(100,180,255,0.5);
+          overflow:hidden;
+          animation:none;
+        }
+        .wp-photo--strip img{object-position:center;}
+        .wp-photo--strip::after{display:none;}
+
+        /* Gap between bottom photos */
+        .wp-photo--bl{border-radius:16px 4px 16px 16px;}
+        .wp-photo--br{border-radius:4px 16px 16px 16px;}
+
+        @keyframes photoFloat1{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+        @keyframes photoFloat2{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+
+        /* Corner glow decorations */
+        .wp-collage-glow{
+          position:absolute;pointer-events:none;border-radius:50%;
+          background:radial-gradient(ellipse at center,rgba(0,160,255,0.2),transparent 70%);
+          filter:blur(20px);z-index:0;
+        }
+        .wp-collage-glow--tl{width:180px;height:180px;top:-40px;left:-20px;}
+        .wp-collage-glow--br{width:200px;height:200px;bottom:-30px;right:-20px;background:radial-gradient(ellipse at center,rgba(232,200,125,0.15),transparent 70%);}
+
+        /* Floating UI cards on top of photos */
+        .wp-fc{
+          position:absolute;z-index:10;
+          display:flex;align-items:flex-start;gap:0.55rem;
+          background:rgba(7,18,32,0.88);
+          backdrop-filter:blur(16px);
+          border-radius:12px;
+          padding:0.65rem 0.9rem;
+          border:1px solid rgba(255,255,255,0.1);
+          box-shadow:0 8px 32px rgba(0,0,0,0.4);
+          max-width:190px;
+        }
+        .wp-fc__icon{font-size:1.1rem;flex-shrink:0;margin-top:1px;}
+        .wp-fc div{display:flex;flex-direction:column;gap:0.1rem;}
+        .wp-fc strong{font-size:0.8rem;font-weight:700;color:#f0ece4;display:block;}
+        .wp-fc span{font-size:0.7rem;color:#6a8090;display:block;line-height:1.4;}
+        .wp-fc__teacher{color:#e8c87d !important;font-style:italic;}
+
+        .wp-fc--grade{
+          top:18px;right:-10px;
+          border-color:rgba(232,200,125,0.3);
+          animation:fcFloat1 5s ease-in-out infinite;
+        }
+        .wp-fc--grade strong{color:#e8c87d;}
+
+        .wp-fc--progress{
+          top:50px;left:-15px;
+          border-color:rgba(158,207,184,0.3);
+          animation:fcFloat2 6s ease-in-out infinite 1s;
+        }
+        .wp-fc--progress strong{color:#9ecfb8;}
+
+        .wp-fc--task{
+          bottom:210px;right:-5px;
+          border-color:rgba(184,169,232,0.28);
+          animation:fcFloat1 7s ease-in-out infinite 2s;
+        }
+        .wp-fc--task strong{color:#b8a9e8;}
+
+        .wp-fc--ai{
+          bottom:20px;left:50%;transform:translateX(-50%);
+          border-color:rgba(158,207,184,0.2);
+          animation:fcFloat2 8s ease-in-out infinite 0.5s;
+        }
+        .wp-fc--ai strong{color:#9ecfb8;}
+
+        @keyframes fcFloat1{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+        @keyframes fcFloat2{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+        /* override for ai card centre transform */
+        .wp-fc--ai{animation:fcFloatAI 8s ease-in-out infinite 0.5s;}
+        @keyframes fcFloatAI{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-5px)}}
 
         /* ── MODEL STRIP ── */
         .wp-model-strip{
