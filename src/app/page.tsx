@@ -82,179 +82,48 @@ export default function Home() {
           <rect width="100%" height="100%" fill="url(#dots)"/>
         </svg>
 
-        {/* ── Large watermark silhouettes ── */}
+        {/* ══ REAL PHOTO WATERMARKS ══ */}
 
-        {/* Watermark 1 — Person writing at desk (far left, tall) */}
-        <svg className="wp-wm wp-wm--1" viewBox="0 0 160 280" fill="none">
-          {/* head */}
-          <ellipse cx="80" cy="38" rx="26" ry="28" fill="url(#wm-grad)"/>
-          {/* neck */}
-          <rect x="72" y="64" width="16" height="18" rx="6" fill="url(#wm-grad)"/>
-          {/* torso */}
-          <path d="M42 82 Q58 72 80 72 Q102 72 118 82 L122 160 Q80 168 38 160 Z" fill="url(#wm-grad)"/>
-          {/* left arm — bent over desk */}
-          <path d="M42 100 Q20 110 12 130 Q8 145 18 148" stroke="url(#wm-grad)" strokeWidth="18" strokeLinecap="round" fill="none"/>
-          {/* right arm — writing */}
-          <path d="M118 100 Q138 112 145 135 Q148 148 140 152" stroke="url(#wm-grad)" strokeWidth="16" strokeLinecap="round" fill="none"/>
-          {/* desk */}
-          <rect x="0" y="162" width="160" height="14" rx="5" fill="url(#wm-grad)"/>
-          {/* paper on desk */}
-          <rect x="24" y="140" width="112" height="76" rx="6" fill="url(#wm-grad)" opacity="0.6"/>
-          {/* writing lines on paper */}
-          <rect x="34" y="152" width="68" height="5" rx="2.5" fill="#e8c87d" opacity="0.4"/>
-          <rect x="34" y="163" width="86" height="4" rx="2" fill="#e8c87d" opacity="0.3"/>
-          <rect x="34" y="173" width="54" height="4" rx="2" fill="#e8c87d" opacity="0.25"/>
-          <rect x="34" y="183" width="76" height="4" rx="2" fill="#e8c87d" opacity="0.2"/>
-          {/* pen in hand */}
-          <rect x="136" y="138" width="4" height="28" rx="2" fill="#e8c87d" opacity="0.7" transform="rotate(25 138 145)"/>
-          <defs>
-            <linearGradient id="wm-grad" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stopColor="#1e4060" stopOpacity="0.55"/>
-              <stop offset="100%" stopColor="#0d2235" stopOpacity="0.35"/>
-            </linearGradient>
-          </defs>
-        </svg>
+        {/* Photo 1 — Teacher + students with tablets (far left, tall) */}
+        <div className="wp-wm wp-wm--1">
+          <img src="/images/student_4.jpg" alt="" />
+          <div className="wp-wm__tint wp-wm__tint--blue"/>
+          <div className="wp-wm__edge wp-wm__edge--left"/>
+        </div>
 
-        {/* Watermark 2 — Student on laptop (right side, large) */}
-        <svg className="wp-wm wp-wm--2" viewBox="0 0 200 300" fill="none">
-          <defs>
-            <linearGradient id="wm2" x1="0" y1="0" x2="0.5" y2="1">
-              <stop offset="0%" stopColor="#2a5070" stopOpacity="0.5"/>
-              <stop offset="100%" stopColor="#0a1e2e" stopOpacity="0.28"/>
-            </linearGradient>
-          </defs>
-          {/* head with headphones */}
-          <ellipse cx="100" cy="44" rx="28" ry="30" fill="url(#wm2)"/>
-          <path d="M73 40 Q73 22 100 20 Q127 22 127 40" stroke="url(#wm2)" strokeWidth="6" fill="none" strokeLinecap="round"/>
-          <rect x="68" y="38" width="10" height="14" rx="5" fill="url(#wm2)"/>
-          <rect x="122" y="38" width="10" height="14" rx="5" fill="url(#wm2)"/>
-          {/* torso */}
-          <path d="M58 88 Q76 76 100 76 Q124 76 142 88 L146 175 Q100 184 54 175Z" fill="url(#wm2)"/>
-          {/* arms on keyboard */}
-          <path d="M58 110 Q38 122 28 148" stroke="url(#wm2)" strokeWidth="20" strokeLinecap="round" fill="none"/>
-          <path d="M142 110 Q162 122 172 148" stroke="url(#wm2)" strokeWidth="20" strokeLinecap="round" fill="none"/>
-          {/* laptop screen */}
-          <rect x="25" y="130" width="150" height="96" rx="8" fill="url(#wm2)" opacity="0.8"/>
-          <rect x="30" y="135" width="140" height="86" rx="5" fill="#0d2235" opacity="0.6"/>
-          {/* screen glow */}
-          <rect x="34" y="139" width="132" height="78" rx="4" fill="#1a3d5c" opacity="0.4"/>
-          {/* code lines */}
-          <rect x="42" y="150" width="70" height="5" rx="2.5" fill="#e8c87d" opacity="0.45"/>
-          <rect x="42" y="161" width="100" height="4" rx="2" fill="#9ecfb8" opacity="0.35"/>
-          <rect x="42" y="171" width="58" height="4" rx="2" fill="#f4a97f" opacity="0.3"/>
-          <rect x="42" y="181" width="88" height="4" rx="2" fill="#9ecfb8" opacity="0.3"/>
-          <rect x="42" y="191" width="46" height="4" rx="2" fill="#b8a9e8" opacity="0.3"/>
-          {/* laptop base */}
-          <rect x="18" y="225" width="164" height="10" rx="5" fill="url(#wm2)"/>
-        </svg>
+        {/* Photo 2 — Hands on laptops close-up (right side, large) */}
+        <div className="wp-wm wp-wm--2">
+          <img src="/images/student_3.jpg" alt="" />
+          <div className="wp-wm__tint wp-wm__tint--dark"/>
+          <div className="wp-wm__edge wp-wm__edge--right"/>
+        </div>
 
-        {/* Watermark 3 — Teacher standing, pointing at board (center-left) */}
-        <svg className="wp-wm wp-wm--3" viewBox="0 0 140 320" fill="none">
-          <defs>
-            <linearGradient id="wm3" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stopColor="#3d5a73" stopOpacity="0.45"/>
-              <stop offset="100%" stopColor="#0a1e2e" stopOpacity="0.22"/>
-            </linearGradient>
-          </defs>
-          {/* head */}
-          <ellipse cx="70" cy="36" rx="24" ry="26" fill="url(#wm3)"/>
-          {/* hair bun */}
-          <ellipse cx="70" cy="13" rx="14" ry="10" fill="url(#wm3)"/>
-          {/* body */}
-          <path d="M36 74 Q52 62 70 62 Q88 62 104 74 L108 180 Q70 190 32 180Z" fill="url(#wm3)"/>
-          {/* left arm — raised/pointing */}
-          <path d="M36 90 Q14 76 4 52 Q0 40 8 36" stroke="url(#wm3)" strokeWidth="16" strokeLinecap="round" fill="none"/>
-          {/* pointer in hand */}
-          <line x1="6" y1="36" x2="6" y2="8" stroke="#e8c87d" strokeWidth="3" strokeLinecap="round" opacity="0.5"/>
-          {/* right arm */}
-          <path d="M104 90 Q122 104 128 124" stroke="url(#wm3)" strokeWidth="16" strokeLinecap="round" fill="none"/>
-          {/* legs */}
-          <rect x="48" y="178" width="24" height="90" rx="10" fill="url(#wm3)"/>
-          <rect x="76" y="178" width="24" height="90" rx="10" fill="url(#wm3)"/>
-          {/* shoes */}
-          <ellipse cx="60" cy="268" rx="16" ry="8" fill="url(#wm3)"/>
-          <ellipse cx="88" cy="268" rx="16" ry="8" fill="url(#wm3)"/>
-        </svg>
+        {/* Photo 3 — Group of students at laptop (bottom left) */}
+        <div className="wp-wm wp-wm--3">
+          <img src="/images/student_1.jpg" alt="" />
+          <div className="wp-wm__tint wp-wm__tint--teal"/>
+          <div className="wp-wm__edge wp-wm__edge--bottom"/>
+        </div>
 
-        {/* Watermark 4 — Student sitting reading (bottom right) */}
-        <svg className="wp-wm wp-wm--4" viewBox="0 0 160 220" fill="none">
-          <defs>
-            <linearGradient id="wm4" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stopColor="#1e3d54" stopOpacity="0.4"/>
-              <stop offset="100%" stopColor="#071524" stopOpacity="0.2"/>
-            </linearGradient>
-          </defs>
-          {/* head tilted down reading */}
-          <ellipse cx="80" cy="32" rx="22" ry="24" fill="url(#wm4)" transform="rotate(12 80 32)"/>
-          {/* body seated */}
-          <path d="M46 66 Q62 55 80 55 Q98 55 114 66 L118 148 Q80 156 42 148Z" fill="url(#wm4)"/>
-          {/* left arm holding book */}
-          <path d="M46 88 Q28 96 20 116 Q16 128 22 134" stroke="url(#wm4)" strokeWidth="16" strokeLinecap="round" fill="none"/>
-          {/* right arm holding book */}
-          <path d="M114 88 Q132 96 140 116 Q144 128 138 134" stroke="url(#wm4)" strokeWidth="16" strokeLinecap="round" fill="none"/>
-          {/* book */}
-          <rect x="18" y="118" width="124" height="72" rx="6" fill="url(#wm4)" opacity="0.85"/>
-          <line x1="80" y1="118" x2="80" y2="190" stroke="#e8c87d" strokeWidth="2" opacity="0.3"/>
-          <rect x="26" y="128" width="48" height="4" rx="2" fill="#e8c87d" opacity="0.3"/>
-          <rect x="26" y="137" width="38" height="3" rx="1.5" fill="#e8c87d" opacity="0.22"/>
-          <rect x="26" y="145" width="44" height="3" rx="1.5" fill="#e8c87d" opacity="0.18"/>
-          <rect x="86" y="128" width="44" height="4" rx="2" fill="#9ecfb8" opacity="0.3"/>
-          <rect x="86" y="137" width="36" height="3" rx="1.5" fill="#9ecfb8" opacity="0.22"/>
-        </svg>
+        {/* Photo 4 — Smiling student at computer (bottom right) */}
+        <div className="wp-wm wp-wm--4">
+          <img src="/images/image_5.jpg" alt="" />
+          <div className="wp-wm__tint wp-wm__tint--gold"/>
+          <div className="wp-wm__edge wp-wm__edge--right"/>
+        </div>
 
-        {/* Watermark 5 — Group class scene (top center, very faint large) */}
-        <svg className="wp-wm wp-wm--5" viewBox="0 0 500 200" fill="none">
-          <defs>
-            <linearGradient id="wm5" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stopColor="#1a3d5c" stopOpacity="0.28"/>
-              <stop offset="100%" stopColor="#071524" stopOpacity="0.1"/>
-            </linearGradient>
-          </defs>
-          {/* 5 seated students in a row */}
-          {[0,1,2,3,4].map((i) => (
-            <g key={i} transform={`translate(${i * 95}, 0)`}>
-              <ellipse cx="50" cy="50" rx="20" ry="22" fill="url(#wm5)"/>
-              <path d="M28 84 Q40 74 50 74 Q60 74 72 84 L74 148 Q50 155 26 148Z" fill="url(#wm5)"/>
-              <rect x="18" y="130" width="64" height="36" rx="4" fill="url(#wm5)" opacity="0.7"/>
-              <rect x="24" y="138" width="30" height="3" rx="1.5" fill="#e8c87d" opacity="0.25"/>
-              <rect x="24" y="146" width="24" height="3" rx="1.5" fill="#e8c87d" opacity="0.18"/>
-            </g>
-          ))}
-          {/* teacher at front */}
-          <g transform="translate(200, -20) scale(0.85)">
-            <ellipse cx="50" cy="28" rx="18" ry="20" fill="url(#wm5)"/>
-            <path d="M30 58 Q40 50 50 50 Q60 50 70 58 L72 130" fill="url(#wm5)"/>
-            <path d="M30 68 Q10 58 2 38" stroke="url(#wm5)" strokeWidth="14" strokeLinecap="round" fill="none"/>
-          </g>
-        </svg>
+        {/* Photo 5 — Laptops wide banner (top center strip, ultra faint) */}
+        <div className="wp-wm wp-wm--5">
+          <img src="/images/student_3.jpg" alt="" />
+          <div className="wp-wm__tint wp-wm__tint--dark"/>
+        </div>
 
-        {/* Watermark 6 — Solo writer with coffee (mid-right, medium) */}
-        <svg className="wp-wm wp-wm--6" viewBox="0 0 130 240" fill="none">
-          <defs>
-            <linearGradient id="wm6" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stopColor="#2a4060" stopOpacity="0.42"/>
-              <stop offset="100%" stopColor="#0a1e2e" stopOpacity="0.2"/>
-            </linearGradient>
-          </defs>
-          <ellipse cx="65" cy="34" rx="22" ry="24" fill="url(#wm6)"/>
-          <path d="M34 68 Q48 56 65 56 Q82 56 96 68 L99 155 Q65 163 31 155Z" fill="url(#wm6)"/>
-          {/* right arm raised — holding coffee */}
-          <path d="M96 86 Q116 80 122 66" stroke="url(#wm6)" strokeWidth="16" strokeLinecap="round" fill="none"/>
-          {/* coffee cup */}
-          <rect x="114" y="50" width="22" height="26" rx="5" fill="url(#wm6)"/>
-          <path d="M136 60 Q144 62 144 70 Q144 76 136 76" stroke="url(#wm6)" strokeWidth="4" fill="none"/>
-          {/* steam */}
-          <path d="M120 46 Q122 40 120 34" stroke="#e8c87d" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.35"/>
-          <path d="M128 46 Q130 38 128 30" stroke="#e8c87d" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.25"/>
-          {/* left arm on desk */}
-          <path d="M34 86 Q14 96 8 118" stroke="url(#wm6)" strokeWidth="16" strokeLinecap="round" fill="none"/>
-          {/* notebook */}
-          <rect x="4" y="118" width="100" height="62" rx="5" fill="url(#wm6)" opacity="0.75"/>
-          <rect x="12" y="128" width="52" height="4" rx="2" fill="#e8c87d" opacity="0.35"/>
-          <rect x="12" y="138" width="40" height="3" rx="1.5" fill="#e8c87d" opacity="0.25"/>
-          <rect x="12" y="147" width="60" height="3" rx="1.5" fill="#e8c87d" opacity="0.2"/>
-          <rect x="12" y="156" width="36" height="3" rx="1.5" fill="#e8c87d" opacity="0.18"/>
-        </svg>
+        {/* Photo 6 — Teacher classroom (mid left repeat, smaller) */}
+        <div className="wp-wm wp-wm--6">
+          <img src="/images/student_4.jpg" alt="" />
+          <div className="wp-wm__tint wp-wm__tint--blue"/>
+          <div className="wp-wm__edge wp-wm__edge--left"/>
+        </div>
 
         {/* ── Animated floating notification pills ── */}
         <div className="wp-pill wp-pill--1">✦ New Task Posted</div>
@@ -814,58 +683,98 @@ export default function Home() {
         .wp-dot-grid{position:absolute;inset:0;opacity:0.6;}
 
         /* ══════════════════════════════════════════
-           WATERMARK SILHOUETTES
+           PHOTO WATERMARKS
         ══════════════════════════════════════════ */
         .wp-wm{
-          position:absolute;pointer-events:none;
-          filter:blur(0.5px);
+          position:absolute;pointer-events:none;overflow:hidden;border-radius:18px;
+        }
+        .wp-wm img{
+          width:100%;height:100%;object-fit:cover;
+          filter:grayscale(85%) contrast(0.9) brightness(0.7);
+          display:block;
         }
 
-        /* Writer at desk — far left edge */
+        /* Per-photo colour tint overlay */
+        .wp-wm__tint{
+          position:absolute;inset:0;border-radius:inherit;mix-blend-mode:color;
+        }
+        .wp-wm__tint--blue{background:rgba(15,50,90,0.85);}
+        .wp-wm__tint--dark{background:rgba(5,15,30,0.8);}
+        .wp-wm__tint--teal{background:rgba(10,45,55,0.82);}
+        .wp-wm__tint--gold{background:rgba(40,30,8,0.75);}
+
+        /* Soft edge fade so photos blend seamlessly into background */
+        .wp-wm__edge{
+          position:absolute;inset:0;border-radius:inherit;
+        }
+        .wp-wm__edge--left{
+          background:linear-gradient(to right,rgba(7,21,36,0.9) 0%,transparent 40%,transparent 60%,rgba(7,21,36,0.9) 100%),
+                     linear-gradient(to bottom,rgba(7,21,36,0.85) 0%,transparent 20%,transparent 80%,rgba(7,21,36,0.95) 100%);
+        }
+        .wp-wm__edge--right{
+          background:linear-gradient(to left,rgba(7,21,36,0.9) 0%,transparent 40%,transparent 60%,rgba(7,21,36,0.9) 100%),
+                     linear-gradient(to bottom,rgba(7,21,36,0.85) 0%,transparent 20%,transparent 80%,rgba(7,21,36,0.95) 100%);
+        }
+        .wp-wm__edge--bottom{
+          background:linear-gradient(to bottom,rgba(7,21,36,0.6) 0%,transparent 30%,transparent 60%,rgba(7,21,36,0.98) 100%),
+                     linear-gradient(to right,rgba(7,21,36,0.8) 0%,transparent 25%,transparent 75%,rgba(7,21,36,0.8) 100%);
+        }
+
+        /* Photo 1 — classroom row (left edge, tall portrait) */
         .wp-wm--1{
-          width:180px;left:-30px;top:12%;
+          width:260px;height:360px;
+          left:-40px;top:8%;
           opacity:0.55;
           animation:wmFloat1 9s ease-in-out infinite;
         }
 
-        /* Student on laptop — right side large */
+        /* Photo 2 — laptop hands (right edge, large landscape) */
         .wp-wm--2{
-          width:260px;right:-40px;top:20%;
+          width:380px;height:240px;
+          right:-60px;top:18%;
           opacity:0.48;
+          border-radius:20px;
           animation:wmFloat2 11s ease-in-out infinite 1.5s;
         }
 
-        /* Teacher pointing — center left */
+        /* Photo 3 — group at laptop (bottom left) */
         .wp-wm--3{
-          width:140px;left:8%;bottom:15%;
+          width:300px;height:200px;
+          left:4%;bottom:12%;
           opacity:0.42;
           animation:wmFloat1 8s ease-in-out infinite 3s;
         }
 
-        /* Student reading — bottom right */
+        /* Photo 4 — smiling student (bottom right) */
         .wp-wm--4{
-          width:200px;right:6%;bottom:8%;
+          width:220px;height:290px;
+          right:2%;bottom:6%;
           opacity:0.38;
           animation:wmFloat2 10s ease-in-out infinite 2s;
         }
 
-        /* Classroom scene — top center, very wide, ultra faint */
+        /* Photo 5 — laptop hands wide strip (top center, ultra faint) */
         .wp-wm--5{
-          width:600px;left:50%;transform:translateX(-50%);top:-2%;
-          opacity:0.22;
+          width:700px;height:200px;
+          left:50%;transform:translateX(-50%);
+          top:-30px;
+          opacity:0.14;
+          border-radius:0;
           animation:wmFade 14s ease-in-out infinite;
         }
+        .wp-wm--5 img{filter:grayscale(100%) contrast(0.7) brightness(0.5);}
 
-        /* Solo writer with coffee — mid right */
+        /* Photo 6 — classroom repeat (mid right, small) */
         .wp-wm--6{
-          width:150px;right:18%;top:55%;
-          opacity:0.36;
+          width:180px;height:240px;
+          right:17%;top:52%;
+          opacity:0.28;
           animation:wmFloat1 7s ease-in-out infinite 4s;
         }
 
-        @keyframes wmFloat1{0%,100%{transform:translateY(0) rotate(0deg)}40%{transform:translateY(-16px) rotate(0.5deg)}80%{transform:translateY(-8px) rotate(-0.3deg)}}
+        @keyframes wmFloat1{0%,100%{transform:translateY(0) rotate(0deg)}40%{transform:translateY(-16px) rotate(0.4deg)}80%{transform:translateY(-8px) rotate(-0.3deg)}}
         @keyframes wmFloat2{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
-        @keyframes wmFade{0%,100%{opacity:0.22}50%{opacity:0.3}}
+        @keyframes wmFade{0%,100%{opacity:0.14}50%{opacity:0.22}}
 
         /* ══════════════════════════════════════════
            FLOATING NOTIFICATION PILLS
@@ -1203,8 +1112,8 @@ export default function Home() {
         .wp-footer__top{display:grid;grid-template-columns:280px 1fr;gap:4rem;padding:4rem 4rem 3rem;}
         .wp-footer__brand p{font-size:0.85rem;color:#3a5060;line-height:1.65;margin:1rem 0 1.5rem;}
         .wp-footer__social{display:flex;gap:0.6rem;}
-        .wp-social-btn{width:34px;height:34px;border-radius:8px;background:rgba(255, 255, 255, 0.04);border:1px solid rgba(255,255,255,0.08);color:#6a8090;display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700;text-decoration:none;transition:all 0.18s;}
-        .wp-social-btn:hover{background:rgba(51, 240, 18, 0.1);border-color:#e8c87d;color:#e8c87d;}
+        .wp-social-btn{width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#6a8090;display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700;text-decoration:none;transition:all 0.18s;}
+        .wp-social-btn:hover{background:rgba(232,200,125,0.1);border-color:#e8c87d;color:#e8c87d;}
         .wp-footer__cols{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;}
         .wp-footer__col{display:flex;flex-direction:column;gap:0.75rem;}
         .wp-footer__col strong{font-size:0.82rem;text-transform:uppercase;letter-spacing:0.08em;color:#8aa5b8;margin-bottom:0.25rem;}
