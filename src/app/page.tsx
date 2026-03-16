@@ -683,98 +683,160 @@ export default function Home() {
         .wp-dot-grid{position:absolute;inset:0;opacity:0.6;}
 
         /* ══════════════════════════════════════════
-           PHOTO WATERMARKS
+           PHOTO WATERMARKS — CENTERED VIRTUAL STYLE
         ══════════════════════════════════════════ */
         .wp-wm{
-          position:absolute;pointer-events:none;overflow:hidden;border-radius:18px;
+          position:absolute;pointer-events:none;overflow:hidden;
+          border-radius:20px;
         }
         .wp-wm img{
-          width:100%;height:100%;object-fit:cover;
-          filter:grayscale(85%) contrast(0.9) brightness(0.7);
-          display:block;
+          width:100%;height:100%;object-fit:cover;display:block;
+          /* Virtual / holographic image treatment */
+          filter:
+            grayscale(100%)
+            brightness(0.55)
+            contrast(1.1)
+            blur(0.4px);
         }
 
-        /* Per-photo colour tint overlay */
+        /* Holographic colour wash — different tint per photo */
         .wp-wm__tint{
-          position:absolute;inset:0;border-radius:inherit;mix-blend-mode:color;
-        }
-        .wp-wm__tint--blue{background:rgba(15,50,90,0.85);}
-        .wp-wm__tint--dark{background:rgba(5,15,30,0.8);}
-        .wp-wm__tint--teal{background:rgba(10,45,55,0.82);}
-        .wp-wm__tint--gold{background:rgba(40,30,8,0.75);}
-
-        /* Soft edge fade so photos blend seamlessly into background */
-        .wp-wm__edge{
           position:absolute;inset:0;border-radius:inherit;
         }
-        .wp-wm__edge--left{
-          background:linear-gradient(to right,rgba(7,21,36,0.9) 0%,transparent 40%,transparent 60%,rgba(7,21,36,0.9) 100%),
-                     linear-gradient(to bottom,rgba(7,21,36,0.85) 0%,transparent 20%,transparent 80%,rgba(7,21,36,0.95) 100%);
+        .wp-wm__tint--blue{
+          background:linear-gradient(145deg,rgba(0,120,255,0.22),rgba(0,200,255,0.12));
+          mix-blend-mode:screen;
         }
-        .wp-wm__edge--right{
-          background:linear-gradient(to left,rgba(7,21,36,0.9) 0%,transparent 40%,transparent 60%,rgba(7,21,36,0.9) 100%),
-                     linear-gradient(to bottom,rgba(7,21,36,0.85) 0%,transparent 20%,transparent 80%,rgba(7,21,36,0.95) 100%);
+        .wp-wm__tint--dark{
+          background:linear-gradient(145deg,rgba(100,180,255,0.18),rgba(0,80,180,0.1));
+          mix-blend-mode:screen;
         }
-        .wp-wm__edge--bottom{
-          background:linear-gradient(to bottom,rgba(7,21,36,0.6) 0%,transparent 30%,transparent 60%,rgba(7,21,36,0.98) 100%),
-                     linear-gradient(to right,rgba(7,21,36,0.8) 0%,transparent 25%,transparent 75%,rgba(7,21,36,0.8) 100%);
+        .wp-wm__tint--teal{
+          background:linear-gradient(145deg,rgba(0,220,180,0.2),rgba(0,160,200,0.1));
+          mix-blend-mode:screen;
+        }
+        .wp-wm__tint--gold{
+          background:linear-gradient(145deg,rgba(232,200,125,0.18),rgba(255,160,50,0.1));
+          mix-blend-mode:screen;
         }
 
-        /* Photo 1 — classroom row (left edge, tall portrait) */
+        /* Glowing neon border + fade-to-transparent edges */
+        .wp-wm__edge{
+          position:absolute;inset:0;border-radius:inherit;
+          /* All photos fade to transparent on every edge */
+          background:
+            linear-gradient(to right,  rgba(7,21,36,0.88) 0%,transparent 22%,transparent 78%,rgba(7,21,36,0.88) 100%),
+            linear-gradient(to bottom, rgba(7,21,36,0.88) 0%,transparent 18%,transparent 80%,rgba(7,21,36,0.98) 100%);
+        }
+        /* Neon inner-glow ring on each photo */
+        .wp-wm::after{
+          content:"";
+          position:absolute;inset:0;border-radius:inherit;
+          box-shadow:inset 0 0 28px rgba(0,160,255,0.2), inset 0 0 6px rgba(232,200,125,0.15);
+          pointer-events:none;
+        }
+
+        /* ── SCAN LINE effect — makes it feel like a hologram ── */
+        .wp-wm::before{
+          content:"";
+          position:absolute;inset:0;z-index:2;border-radius:inherit;
+          background:repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 3px,
+            rgba(0,0,0,0.08) 3px,
+            rgba(0,0,0,0.08) 4px
+          );
+          pointer-events:none;
+        }
+
+        /* ── PHOTO POSITIONS — all centred in the hero zone ── */
+
+        /* Photo 1 — classroom row: centre-left, tall */
         .wp-wm--1{
-          width:260px;height:360px;
-          left:-40px;top:8%;
-          opacity:0.55;
+          width:280px;height:340px;
+          left:50%;top:50%;
+          transform:translate(-170%,-52%);
+          opacity:0.52;
           animation:wmFloat1 9s ease-in-out infinite;
         }
 
-        /* Photo 2 — laptop hands (right edge, large landscape) */
+        /* Photo 2 — laptop hands: centre-right, landscape */
         .wp-wm--2{
-          width:380px;height:240px;
-          right:-60px;top:18%;
-          opacity:0.48;
-          border-radius:20px;
+          width:360px;height:220px;
+          left:50%;top:50%;
+          transform:translate(20%,-75%);
+          opacity:0.44;
           animation:wmFloat2 11s ease-in-out infinite 1.5s;
         }
 
-        /* Photo 3 — group at laptop (bottom left) */
+        /* Photo 3 — group at laptop: dead centre, behind hero text */
         .wp-wm--3{
-          width:300px;height:200px;
-          left:4%;bottom:12%;
-          opacity:0.42;
-          animation:wmFloat1 8s ease-in-out infinite 3s;
+          width:420px;height:260px;
+          left:50%;top:50%;
+          transform:translate(-50%,-55%);
+          opacity:0.22;
+          filter:blur(1px);
+          animation:wmFloat3 13s ease-in-out infinite 2s;
         }
+        .wp-wm--3 img{filter:grayscale(100%) brightness(0.4) contrast(1.2) blur(1px);}
 
-        /* Photo 4 — smiling student (bottom right) */
+        /* Photo 4 — smiling student: centre-right, portrait */
         .wp-wm--4{
-          width:220px;height:290px;
-          right:2%;bottom:6%;
-          opacity:0.38;
-          animation:wmFloat2 10s ease-in-out infinite 2s;
+          width:220px;height:300px;
+          left:50%;top:50%;
+          transform:translate(80%,-48%);
+          opacity:0.46;
+          animation:wmFloat4 10s ease-in-out infinite 3s;
         }
 
-        /* Photo 5 — laptop hands wide strip (top center, ultra faint) */
+        /* Photo 5 — laptop hands wide: centre top banner, very faint */
         .wp-wm--5{
-          width:700px;height:200px;
-          left:50%;transform:translateX(-50%);
-          top:-30px;
-          opacity:0.14;
-          border-radius:0;
-          animation:wmFade 14s ease-in-out infinite;
+          width:680px;height:180px;
+          left:50%;top:8%;
+          transform:translateX(-50%);
+          opacity:0.13;
+          border-radius:12px;
+          filter:blur(1.5px);
+          animation:wmFade 16s ease-in-out infinite;
         }
-        .wp-wm--5 img{filter:grayscale(100%) contrast(0.7) brightness(0.5);}
+        .wp-wm--5 img{filter:grayscale(100%) brightness(0.4) contrast(0.9) blur(2px);}
+        .wp-wm--5::before{display:none;}
+        .wp-wm--5::after{display:none;}
 
-        /* Photo 6 — classroom repeat (mid right, small) */
+        /* Photo 6 — classroom smaller: lower centre */
         .wp-wm--6{
-          width:180px;height:240px;
-          right:17%;top:52%;
-          opacity:0.28;
-          animation:wmFloat1 7s ease-in-out infinite 4s;
+          width:240px;height:180px;
+          left:50%;top:50%;
+          transform:translate(-130%,55%);
+          opacity:0.32;
+          animation:wmFloat6 8s ease-in-out infinite 4.5s;
         }
 
-        @keyframes wmFloat1{0%,100%{transform:translateY(0) rotate(0deg)}40%{transform:translateY(-16px) rotate(0.4deg)}80%{transform:translateY(-8px) rotate(-0.3deg)}}
-        @keyframes wmFloat2{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
-        @keyframes wmFade{0%,100%{opacity:0.14}50%{opacity:0.22}}
+        @keyframes wmFloat1{
+          0%,100%{transform:translate(-170%,-52%)}
+          50%{transform:translate(-170%,-57%)}
+        }
+        @keyframes wmFloat2{
+          0%,100%{transform:translate(20%,-75%)}
+          50%{transform:translate(20%,-80%)}
+        }
+        @keyframes wmFloat3{
+          0%,100%{transform:translate(-50%,-55%)}
+          50%{transform:translate(-50%,-60%)}
+        }
+        @keyframes wmFloat4{
+          0%,100%{transform:translate(80%,-48%)}
+          50%{transform:translate(80%,-54%)}
+        }
+        @keyframes wmFloat6{
+          0%,100%{transform:translate(-130%,55%)}
+          50%{transform:translate(-130%,50%)}
+        }
+        @keyframes wmFade{
+          0%,100%{opacity:0.22}
+          50%{opacity:0.32}
+        }
 
         /* ══════════════════════════════════════════
            FLOATING NOTIFICATION PILLS
